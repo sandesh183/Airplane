@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0px;
+    font-family: sans-serif;
+}
+.main{
+    height: 100vh;
+    background: linear-gradient(#21b3ef , #fff);
+    position: relative;
+    overflow: hidden;
+}
+.navbar{
+    width: 100%;
+    border-bottom: 1px solid #fff;
+}
+.logo img{
+    width: 100px;
+}
+nav{
+    width: 80%;
+    position: sticky;
+    align-items: center;
+    display: flex;
+    z-index: 2;
+    margin: 20px auto 0;
+}
+.logo{
+    flex-basis: 15%;
+}
+.nav-link{
+    flex: 1;
+    text-align: center;
+}
+.nav-link ul{
+    display: inline;
+    list-style: none;
+}
+.nav-link ul li{
+    display: inline-block;
+    list-style: none;
+    padding: 15px 0px;
+    margin: 0 25px;
+    position: relative;
+}
+.nav-link ul li a{
+    text-decoration: none;
+    color: #b7e7f6;
+}
+.nav-link ul li::after{
+    content: '';
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    background: transparent;
+    bottom: 0px;
+    left: 0px;
+}
+.nav-link ul li:hover::after{
+    background: #fff;
+}
+.active::after{
+    background: #fff!important;
+}/*
+@media (max-width:700px){
+	.nav-link ul li{
+		display: block;
+	}
+	.nav-link ul{
+		padding: 20px 5px;
+	}
+	.nav-link{
+		margin-top: 30px;
+	}
+	.nav-logo{
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.menu-icon{
+		display: block;
+		top: 20px;
+		right: 35px;
+		position: absolute;
+		cursor: pointer;
+	}
+	#nav{
+		height: 0;
+		overflow: hidden;
+		transition: 1s;
+	}
+} */
+.content{
+    width: 300px;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    text-align: center;
+    z-index: 2;
+}
+.menu-icon img{
+    float: right;
+    font-size: 35px;
+}
+.social-icons img{
+    margin: 0 10px;
+    width: 20px;
+    cursor: pointer;
+}
+.search-box{
+    border: 1px solid #b7e7f6;
+    border-radius: 30px;
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    align-items: center;
+    margin-top: 20px;
+    display: flex;
+}
+.search-box input{
+    margin: 8px 12px 8px 10px;
+    background: transparent;
+    border: 0px solid #b7e7f6;
+    border: none;
+    outline: none;
+}
+.search-box img{
+    margin-left: 80px;
+    float: right;
+    width: 18px;
+    cursor: pointer;
+}
+::placeholder{
+    color: #b7e7f6;
+}
+#clouds{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -100px;
+    animation: clouds 5s linear infinite;
+}
+@keyframes clouds{
+    0%{
+        top: -100px;
+    }
+    20%{
+        top: 100px;
+    }
+    80%{
+        top: 100px;
+    }
+    100%{
+        top: -100px;
+    }
+}
+#airplane{
+    width: 220px;
+    height: 40px;
+    top: 180px;
+    left: -250px;
+    z-index: 2;
+    position: absolute;
+    animation: fly 5s linear infinite;
+}
+@keyframes fly{
+    0%{
+        left: -250px;
+    }
+    20%{
+        left: 250px;
+    }
+    80%{
+        left: 250px;
+    }
+    100%{
+        left: 110%;
+    }
+}
+#hotairbaloon{
+    position: absolute;
+    width: 700px;
+    height: -450px;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: hotairbaloon 5s linear infinite;
+}
+@keyframes hotairbaloon{
+    0%{
+        bottom: -450px;
+    }
+    20%{
+        bottom: 100px;
+    }
+    80%{
+        bottom: 100px;
+    }
+    100%{
+        bottom: -450px;
+    }
+}
+.baloon1{
+    width: 150px;
+    opacity: 0.4;
+}
+.baloon2{
+    width: 350px;
+}
+.baloon3{
+    width: 190px;
+    opacity: 0.6;
+}
+#myimg{
+    width: 70px;
+    height: 70px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    cursor: pointer;
+}
+@media (max-width:700px){
+	.vertical-bar{
+		display: none;
+	}
+	.banner-title{
+		margin: 80px 40px;
+	}
+	.banner-title h1{
+		font-size: 50px;
+	}
+	.nav-bar{
+		padding: 40px 30px;
+	}
+	.fa-bars{
+		position: absolute;
+		right: 20px;
+		top: 10px;
+	}
+	.nav-bar .fa{
+		display: block;
+		color: #fff;
+		margin: 10px 25px;
+		font-size: 22px;
+		cursor: pointer;
+	}
+	.nav-links{
+		height: 100vh;
+		width: 200px;
+		background: #000;
+		top: 0px;
+		position: absolute;
+		text-align: left;
+		z-index: 2;
+	}
+	.nav-links ul a{
+		display: block;
+	}
+	.nav-links .btn{
+		float: none;
+	}
+}
